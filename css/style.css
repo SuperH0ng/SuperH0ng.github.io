@@ -690,8 +690,8 @@ body {
   color: white; }
 
 ::selection {
-  background: seagreen;
-  color: white; }
+  background: red;
+  color: seagreen; }
 
 img, video, audio, iframe, object {
   max-width: 100%; }
