@@ -804,7 +804,7 @@ HEADER STYLING
   background-image: url("../img/christmas.jpg");
   background-size: cover;
   background-position: center center;
-  color: white;
+  color: rgb(0, 114, 44);
   padding: 0;
   height: 3em; }
   .header .container {
@@ -820,7 +820,7 @@ HEADER STYLING
     font-weight: 800;
     text-transform: uppercase; }
     .header h1 a {
-      color: white;
+      color: rgb(255, 0, 0);
       text-decoration: none; }
 
 /***************
