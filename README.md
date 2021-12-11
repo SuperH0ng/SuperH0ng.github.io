@@ -17,4 +17,5 @@ https://rubyinstaller.org/downloads/ 이 사이트에서 Window전용 Ruby와 De
 ## 2. 테마 포크로 받아오기
 마음에 드는 지킬 테마를 찾은 후 (https://long-haul.netlify.app/)  
 깃허브 주소에 들어가 내 원격저장소에 fork를 받음
-내 원격저장소에 fork된 Repository 명을 <b>SuperH0ng.github.io</b>으로 바
+내 원격 저장소에 fork된 Repository 명을 <b>SuperH0ng.github.io</b>으로 바꿔줌
+로컬 저장소에 clone을 받으면 환경 설정 
