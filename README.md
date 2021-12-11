@@ -22,7 +22,7 @@ https://rubyinstaller.org/downloads/ 이 사이트에서 Window전용 Ruby와 De
 
 ## 3. 테마 수정
 
-### * _config.yml 파일의 title을 수정하여 블로그 이름을 <b>SuperH0ng</b>으로 바꿔줌  
+* ### _config.yml 파일의 title을 수정하여 블로그 이름을 <b>SuperH0ng</b>으로 바꿔줌  
 ![image](https://user-images.githubusercontent.com/81635179/145671623-887a719f-9a99-4fa3-8854-570b4830e25e.png)  
 
 ### * header.html 파일을 수정해서 눌렀을 때 내 github, instagram, velog로 넘어가지는 링크 생성  
