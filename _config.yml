@@ -24,12 +24,9 @@ navigation:
 social:
   github: SuperH0ng
   instagram : SuperH0ng_
-  # twitter: brianmaierjr
-  # facebook: brianmaierjr
   email: ghdtmdgus100@gmail.com
-  # linkedin: brianmaierjr
 
-google_analytics: "UA-58263416-1"
+google_analytics: "UA-215199109-1"
 comment :
   provider : "disqus"
   disqus :
