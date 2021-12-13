@@ -9,5 +9,5 @@ comments : false
 
 ### 요것은 비어있는 포스팅 
 ![](https://images.velog.io/images/superhong/post/433f2ccd-33fb-4d27-9625-c8d34e1e1b77/image.png)
-comments : false 라서 댓글이 아마 없고요
+### comments : false 라서 댓글이 아마 없고요
 # 다른 게시물에는 댓글 있습니다~
