@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Google Analytics 연동하기~"
-date:   2021-12-14
+date:   2021-12-13
 description : 마지막 포스팅 구글 애널리틱스 연동하고 포스트 작성 이거 하면 5% 점수 준다고 해서 하는거.. 이제 진짜 끝났다 유레카 종강 수고수고~
 comments : true
 ---
