@@ -2,8 +2,7 @@
 layout: post
 title:  "Jekyll이 뭔데?"
 date:   2021-12-10
-description : jekyll은 텍스트 파일로 정적 웹페이지를 만들 수 있는 서비스로 ruby 기반에서 실행된다.
-또 github pages에서 무료로 호스팅 할 수 있으며 markdown 등의 변환기와 Liquid 렌더러를 통해 가공을 통해 웹 서버에 곧바로 게시 가능하게 한다.
+description : jekyll은 텍스트 파일로 정적 웹페이지를 만들 수 있는 서비스로 ruby 기반에서 실행된다.또 github pages에서 무료로 호스팅 할 수 있으며 markdown 등의 변환기와 Liquid 렌더러를 통해 가공을 통해 웹 서버에 곧바로 게시 가능하게 한다.
 comments : true
 ---
 
