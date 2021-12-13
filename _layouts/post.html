@@ -31,7 +31,7 @@ layout: default
   </div>
 </div>
 
-%- if page.comments %}
+{%- if page.comments %}
 <h2>Comments</h2>  
 <div id="disqus_thread"></div>
 <script>
@@ -44,7 +44,7 @@ layout: default
     (function() {
     var d = document, s = d.createElement('script');
     s.src = 'https://superh0ng.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', + new Date());
+    s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
     })();
 </script>
