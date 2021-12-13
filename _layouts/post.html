@@ -31,7 +31,7 @@ layout: default
   </div>
 </div>
 
-<!-- %- if page.comments %}
+%- if page.comments %}
 <h2>Comments</h2>  
 <div id="disqus_thread"></div>
 <script>
@@ -49,7 +49,4 @@ layout: default
     })();
 </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %} -->
-<!-- {%- if site.disqus.shortname -%}
-  {%- include disqus_comments.html -%}
-{%- endif -%} -->
+{% endif %}
