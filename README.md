@@ -70,3 +70,5 @@ Universal Code 클릭 후 아래의 기본 코드를 수정하여 \_layouts/post
 댓글 기능을 사용하고 싶은 post 파일에 아래처럼 comments : true 코드 추가  
 ![image](https://user-images.githubusercontent.com/81635179/145854133-1ab028a9-c8d3-46ba-8ba6-020b608dd0cc.png)  
 
+댓글 달기  
+![image](https://user-images.githubusercontent.com/81635179/145861386-c85b32e3-87a0-4697-8894-cd008ecef41f.png)
