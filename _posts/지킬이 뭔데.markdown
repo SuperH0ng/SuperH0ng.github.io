@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Jekyll이 뭔데?"
+date:   2021-12-10
+description : jekyll은 텍스트 파일로 정적 웹페이지를 만들 수 있는 서비스로 ruby 기반에서 실행된다.
+또 github pages에서 무료로 호스팅 할 수 있으며 markdown 등의 변환기와 Liquid 렌더러를 통해 가공을 통해 웹 서버에 곧바로 게시 가능하게 한다.
+comments : true
+---
+
+### jekyll이란?
+jekyll은 텍스트 파일로 정적 웹페이지를 만들 수 있는 서비스로 ruby 기반에서 실행된다.
+또 github pages에서 무료로 호스팅 할 수 있으며 markdown 등의 변환기와 Liquid 렌더러를 통해 가공을 통해 웹 서버에 곧바로 게시 가능하게 한다.
+
+### jekyll 설치하기
+먼저 jekyll은 ruby 기반이기 때문에 ruby가 먼저 설치 되어야한다.
+https://rubyinstaller.org/downloads/ 이 사이트에서 Window전용 Ruby와 DevKit(개발자 키트) 설치 프로그램을 다운로드 받을 수 있다.
+
+ruby 설치가 완료되었다면
+* 터미널에서 ` gem install jekyll bundler` 라는 명령어를 통해 패키지를 설치한다.  
+* ` jekyll -v`  명령어로 설치를 확인한다.  
+* 그 후 로컬 저장소로 쓸 폴더로 이동하여  
+* ` jekyll new .` 다음 명령어로 지킬 기본 블로그를 생성할 수도 있고,
+원하는 테마를 찾은 뒤 깃허브에서 fork를 받아 사용할 수도 있다.
+* ` jekyll serve` 지킬을 실행할 수 있다. 

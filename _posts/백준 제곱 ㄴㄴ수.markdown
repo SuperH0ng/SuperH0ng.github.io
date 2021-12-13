@@ -1,0 +1,111 @@
+---
+layout: post
+title:  "[백준] 1016번 제곱 ㄴㄴ 수 Python 풀이"
+date:   2021-11-18
+description : 에라토스테네스의 체 로직을 이용한 백준 1016번 문제 풀기 [Python]
+comments : true
+---
+
+## 백준 플레 도전기 - 1
+#### 2021년 10월 11일
+![](https://images.velog.io/images/superhong/post/18682fd1-b0b6-4e5b-9a57-48d8da8f03df/image.png)
+~~한참 남음!~~
+
+
+<br><br><br>
+#### 백준 1016번
+https://www.acmicpc.net/problem/1016
+
+![](https://images.velog.io/images/superhong/post/3562a6ff-01a9-43b4-a5c3-2c4f9759f078/image.png)
+<br><br>
+이 문제를 읽고 가장 먼저 들었던 생각이 **에라토스테네스의 체**이다.
+**에라토스테네스의 체**는 소수를 찾는 알고리즘으로 [<위키피디아>](https://ko.wikipedia.org/wiki/%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%9D%98_%EC%B2%B4)의 설명을 보면 다음과 같다.
+![](//upload.wikimedia.org/wikipedia/commons/b/b9/Sieve_of_Eratosthenes_animation.gif)
+>
+_먼저
+2부터 소수를 구하고자 하는 구간의 모든 수를 나열한다. 그림에서 회색 사각형으로 두른 수들이 여기에 해당한다.
+2는 소수이므로 오른쪽에 2를 쓴다. (빨간색)
+자기 자신을 제외한 2의 배수를 모두 지운다.
+남아있는 수 가운데 3은 소수이므로 오른쪽에 3을 쓴다. (초록색)
+자기 자신을 제외한 3의 배수를 모두 지운다.
+남아있는 수 가운데 5는 소수이므로 오른쪽에 5를 쓴다. (파란색)
+자기 자신을 제외한 5의 배수를 모두 지운다.
+남아있는 수 가운데 7은 소수이므로 오른쪽에 7을 쓴다. (노란색)
+자기 자신을 제외한 7의 배수를 모두 지운다.
+위의 과정을 반복하면 구하는 구간의 모든 소수가 남는다.
+그림의 경우, **11*11 > 120**이므로 11보다 작은 수의 배수들만 지워도 충분하다. 즉, 120보다 작거나 같은 수 가운데 2, 3, 5, 7의 배수를 지우고 남는 수는 모두 소수이다._
+
+<br><br><br>
+### 풀이
+소수를 위와 같은 방식으로 구할 수 있는데,
+
+이 방법을 응용해서 이 문제, **제곱 ㄴㄴ 수**에 적용하려고 한다.
+범위 내의 수들 제곱수로 나뉘어 떨어지는지를, 즉 **제곱수의 배수**인지를 조사한 뒤 그 개수를 셀건데 **이미 개수에 넣은 수**가 또 나오면 중복이 되므로, 리스트를 만들어서 이미 카운트한 수는 **True**값을 할당해주는 방식으로 알고리즘을 짜려고 한다.
+<br><br>
+```python
+min, max = map(int, input().split())
+
+answer = max - min + 1
+```
+먼저 최솟값과 최댓값을 받고 answer 값에 범위 내에 포함되는 수의 개수를 넣어준 뒤,
+**'제곱수의 배수'의 개수**를 answer에서 빼줄거다.
+<br><br>
+
+```python
+divisibleByTheSquare = [False] * (max-min+1)
+#범위가 만약 32부터 36이라고 하면 divisibleByTheSquare[0], divisibleByTheSquare[1]은
+#각각 32와 33을 가리킨다.
+
+#여기서 False는 제곱의 배수가 아닌 수라면
+#아래 코드에서 True로 바뀌는 수는 제곱의 배수겠죠?
+```
+이렇게 찾고자 하는 범위만큼의 리스트를 만들고 **False** 값을 할당해준다.
+그 후에 범위 내에서 제곱수의 배수를 찾게되면 **그 수에 해당하는 인덱스**를 **divisibleByTheSquare**에서 **True**값으로 바꿔주고 answer 값에서 1을 빼주면 된다.
+<br><br><br>
+```python
+for i in range(2, int(max**0.5+1)):
+```
+위의 에라토스테네스의 체에서처럼 나눌 수는 2의 제곱부터 **int(max\*\*0.5)의 제곱**까지만 고려하면 된다.
+<br><br>
+```python
+for i in range(2, int(max**0.5+1)):
+    square = i**2
+    for j in range((((min-1)//square)+1)*square, max+1, square):
+```
+이제 제곱수인 4, 9, 16 같은 것들이 범위 내의 수를 나누어 떨어지게 하면 **그 수에 해당하는 인덱스**를 **divisibleByTheSquare**에서 **True**값으로 바꿔준다.
+
+이때 범위를 **((((min-1)//square)+1)*square, max+1, square)** 이렇게 해준 이유는,
+**min**이상의 가장 작은 **square의 배수**부터 **square**만큼 커지는 수만 계산하기 위함이다.
+~~이해하려고 노력해보셈!~~
+<br><br><br>
+```python
+for i in range(2, int(max**0.5+1)):
+    square = i**2
+    for j in range((((min-1)//square)+1)*square, max+1, square):
+      if not divisibleByTheSquare[j-min] : 		#해당 인덱스 값이 False라면
+                  divisibleByTheSquare[j-min] = True 	#True 바꿔준 뒤
+                  answer -= 1 				#answer에서 1을 빼줌
+ 	#다음 반복에서는 나뉘어 떨어지더라도 이미 TRUE이기 때문에 answer에서 1이 빼지지 않음.
+```
+가장 밖의 for문을 다 돌게 되면 answer에서 제곱으로 나누어 떨어지는 수의 총 개수만큼 빼진다.
+<br><br><br><br>
+
+### 전체코드
+```python
+min, max = map(int, input().split())
+
+answer = max - min + 1
+divisibleByTheSquare = [False] * (max-min+1)
+
+for i in range(2, int(max**0.5+1)):
+    square = i**2
+    for j in range((((min-1)//square)+1)*square, max+1, square):
+        if not divisibleByTheSquare[j-min] :
+            divisibleByTheSquare[j-min] = True
+            answer -= 1
+print(answer)
+```
+<br><br>
+골드1 치고는 쉬운 문제였던 듯
+
+##### **첫 포스팅 힘들다,,**

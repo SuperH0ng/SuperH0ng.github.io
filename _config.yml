@@ -30,6 +30,10 @@ social:
   # linkedin: brianmaierjr
 
 google_analytics: "UA-58263416-1"
+comment :
+  provider : "disqus"
+  disqus :
+    shortname : "SuperH0ng"
 
 disqus:
     shortname: brianmaierjr
