@@ -72,3 +72,9 @@ Universal Code 클릭 후 아래의 기본 코드를 수정하여 \_layouts/post
 
 댓글 달기  
 ![image](https://user-images.githubusercontent.com/81635179/145861386-c85b32e3-87a0-4697-8894-cd008ecef41f.png)
+
+
+
+
+## 구글 Analytics 연동  
+은 포스팅 확인하기~~  
